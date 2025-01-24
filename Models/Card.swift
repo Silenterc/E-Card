@@ -8,10 +8,11 @@
 import Foundation
 import CoreTransferable
 
-enum CardType: Codable {
-    case Citizen
-    case Emperor
-    case Slave
+enum CardType: String, Codable {
+    case Citizen = "Card-Citizen"
+    case Emperor = "Card-Emperor"
+    case Slave = "Card-Slave"
+    case Back = "Card-Back"
 }
 struct Card: Identifiable, Codable {
     var id: UUID = UUID()
