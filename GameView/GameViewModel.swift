@@ -14,22 +14,29 @@ class GameViewModel {
     var screenSize: CGSize
     
     var isFocusedHand: Bool = false
+    var isExpandedSidebar: Bool = false
     var draggedCard: Card?
     
     private var myCardsWidthBase: CGFloat {
-        return screenSize.width / 8
+        return screenSize.width / 7
     }
     var myCardsWidth: CGFloat {
-        isFocusedHand ? myCardsWidthBase * 1.5 : myCardsWidthBase
+        isFocusedHand ? myCardsWidthBase * 1.3 : myCardsWidthBase
     }
     var focusedHandOffset: CGSize {
         .init(width: 0, height: -1 * myCardsWidth)
     }
     var tableWidth: CGFloat {
-        return screenSize.width * 0.8
+        return screenSize.width * 0.7
     }
     var tableHeight: CGFloat {
         return screenSize.height * 0.4
+    }
+    var sidebarWidth: CGFloat {
+        return isExpandedSidebar ? screenSize.width * 0.4 : screenSize.width * 0.1
+    }
+    var sidebarHeight: CGFloat {
+        return isExpandedSidebar ? screenSize.height * 0.4 : screenSize.height * 0.2
     }
     private static let MAX_SPREAD_ANGLE: Double = 45
     private static let MAX_CARDS_AMOUNT: Double = 5
