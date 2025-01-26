@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CardView: View {
-    var type: CardType
-    @Binding var width: CGFloat
+    var card: Card
+    var width: CGFloat
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
-            Image(type.rawValue)
+            Image(card.cardType.rawValue)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
         }
@@ -24,5 +24,9 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(type: .Citizen, width: .constant(50))
+    HStack {
+        ForEach(CardType.allCases, id: \.rawValue) { type in
+            CardView(card: .init(cardType: .Citizen), width: 60)
+        }
+    }
 }

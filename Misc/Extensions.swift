@@ -32,3 +32,28 @@ extension Font {
         return .custom(type.value, size: size)
     }
 }
+
+extension Color {
+    public static let tableBrown: Color = Color(red: 139 / 255, green: 69 / 255, blue: 19 / 255)
+    
+}
+
+extension View {
+  func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
+    background(
+      GeometryReader { geometryProxy in
+        Color.clear
+          .preference(key: SizePreferenceKey.self, value: geometryProxy.size)
+      }
+    )
+    .onPreferenceChange(SizePreferenceKey.self, perform: onChange)
+  }
+}
+
+import UniformTypeIdentifiers
+
+extension UTType {
+    static let card = UTType(exportedAs: "cz.lukas.zima.E-Card.card")
+}
+
+

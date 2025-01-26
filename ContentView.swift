@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-        HStack {
-        }
+        GameView(viewModel: .init(cards: Card.cardsPreview))
     }
 }
 

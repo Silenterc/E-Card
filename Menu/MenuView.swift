@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Menu: View {
+struct MenuView: View {
     var body: some View {
         VStack {
             title("E-Card")
@@ -63,5 +63,5 @@ struct Menu: View {
 }
 
 #Preview {
-    Menu()
+    MenuView()
 }
