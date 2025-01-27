@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
-
+/**
+ A View of a `Card` used in the Game
+ */
 struct CardView: View {
     var card: Card
     var width: CGFloat
+    // A flipped Card shows the Back of the Card
+    var flipped: Bool = false
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
-            Image(card.cardType.rawValue)
+            Image(flipped ? CardType.Back.rawValue : card.cardType.rawValue)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
         }

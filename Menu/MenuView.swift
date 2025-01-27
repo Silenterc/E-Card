@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-
+/**
+ The central Menu View
+ */
 struct MenuView: View {
     var body: some View {
         VStack {
@@ -28,22 +30,33 @@ struct MenuView: View {
             Button {
                 // TODO: Start Game
             } label: {
-                menuText(text: "Start A Game", size: 32, symbol: "play")
+                MenuText(text: "Start A Game", size: 32, symbol: "play")
             }
             Button {
                 // TODO: Show Rules
             } label: {
-                menuText(text: "Rules", size: 32, symbol: "book")
+                MenuText(text: "Rules", size: 32, symbol: "book")
             }
             Button {
                 // TODO: Show About
             } label: {
-                menuText(text: "About", size: 32, symbol: "info.circle")
+                MenuText(text: "About", size: 32, symbol: "info.circle")
             }
         }
     }
+    func title(_ text: String) -> some View {
+        Text(text)
+            .font(.saira(.regular, size: 80))
+            .foregroundStyle(.white)
+    }
+}
+
+struct MenuText : View {
+    var text: String
+    var size: CGFloat
+    var symbol: String
     
-    func menuText(text: String, size: CGFloat, symbol: String) -> some View {
+    var body : some View {
         HStack {
             Image(systemName: symbol)
                 .bold()
@@ -53,12 +66,6 @@ struct MenuView: View {
                 .font(.saira(.regular, size: size))
                 .foregroundStyle(.white)
         }
-    }
-    
-    func title(_ text: String) -> some View {
-        Text(text)
-            .font(.saira(.regular, size: 80))
-            .foregroundStyle(.white)
     }
 }
 

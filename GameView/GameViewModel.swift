@@ -4,42 +4,59 @@
 //
 //  Created by Lukas Zima on 25.01.2025.
 //
-
 import Foundation
 import SwiftUI
+/**
+ A ViewModel for the Game View
+ */
 @Observable
 class GameViewModel {
+    // Cards in Hand
     var cards: [Card]
-    var tablecards: [Card] = .init()
+    // My Card on the Table
+    var tableCardMine: Card?
+    // Enemy Players Card on the Table
+    var tableCardEnemy: Card?
+    // Size of the screen (for UI calculations)
     var screenSize: CGSize
-    
+
     var isFocusedHand: Bool = false
     var isExpandedSidebar: Bool = false
     var draggedCard: Card?
     
+    // The base width a Card should have
     private var myCardsWidthBase: CGFloat {
-        return screenSize.width / 7
+        screenSize.width / 7
     }
+    // The width a Card should have when enlarged (in an expanded hand or on the table)
+    var myCardsWidthExpanded: CGFloat {
+        myCardsWidthBase * 1.3
+    }
+    // Calculates the width the Cards should have
     var myCardsWidth: CGFloat {
-        isFocusedHand ? myCardsWidthBase * 1.3 : myCardsWidthBase
+        isFocusedHand ? myCardsWidthExpanded : myCardsWidthBase
     }
+    // By how much to vertically lift up the Cards Hand when tapped on
     var focusedHandOffset: CGSize {
         .init(width: 0, height: -1 * myCardsWidth)
     }
     var tableWidth: CGFloat {
-        return screenSize.width * 0.7
+        screenSize.width * 0.7
     }
     var tableHeight: CGFloat {
-        return screenSize.height * 0.4
+        screenSize.height * 0.4
     }
     var sidebarWidth: CGFloat {
-        return isExpandedSidebar ? screenSize.width * 0.4 : screenSize.width * 0.1
+        isExpandedSidebar ? screenSize.width * 0.4 : screenSize.width * 0.1
     }
     var sidebarHeight: CGFloat {
-        return isExpandedSidebar ? screenSize.height * 0.4 : screenSize.height * 0.2
+        isExpandedSidebar ? screenSize.height * 0.4 : screenSize.height * 0.2
     }
+    // The maximum angle under which a Card can be spread in an unfocused Hand
     private static let MAX_SPREAD_ANGLE: Double = 45
+    // The maximum amount of Cards in a Hand
     private static let MAX_CARDS_AMOUNT: Double = 5
+    // By how much to change the angle of the Card spread for each Card
     private static var angleStepAmount: Double {
         GameViewModel.MAX_SPREAD_ANGLE / max(1, (GameViewModel.MAX_CARDS_AMOUNT - 1))
     }
@@ -97,7 +114,9 @@ class GameViewModel {
         }
         return .init(width: xOffset, height: -1 * yOffset)
     }
-    
+    /**
+     Calculates the `Offset` by which a `Card` at `cardIndex` should be offset in the Hand when focused
+     */
     func calculateOffsetFocused(cardIndex: Int) -> CGSize {
         let cardCount = cards.count
         // Offset to counteract when we have an even amount of Cards
