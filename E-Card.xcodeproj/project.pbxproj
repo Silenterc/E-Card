@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42778F752D4432BE007C075A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F742D4432BE007C075A /* Card.swift */; };
+		42778F762D4432BE007C075A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F742D4432BE007C075A /* Card.swift */; };
+		42778F772D4432BE007C075A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F742D4432BE007C075A /* Card.swift */; };
+		42778F7A2D443610007C075A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F792D443610007C075A /* Extensions.swift */; };
+		42778F7B2D443610007C075A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F792D443610007C075A /* Extensions.swift */; };
+		42778F7C2D443610007C075A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F792D443610007C075A /* Extensions.swift */; };
+		42778F822D443C8B007C075A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F7E2D443B5B007C075A /* MenuView.swift */; };
+		42778F852D443F46007C075A /* Saira.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42778F842D443F46007C075A /* Saira.ttf */; };
+		42778F8C2D444D5E007C075A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F8B2D444D5E007C075A /* CardView.swift */; };
+		42778F8F2D45569C007C075A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F8E2D45569C007C075A /* GameView.swift */; };
+		42778F912D45572A007C075A /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F902D45572A007C075A /* GameViewModel.swift */; };
+		42778F932D4642DB007C075A /* Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F922D4642DB007C075A /* Extras.swift */; };
+		42778F962D4652CA007C075A /* CardDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42778F952D4652CA007C075A /* CardDropDelegate.swift */; };
+		42A041052D442E7300D0B9DA /* E_CardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A041042D442E7300D0B9DA /* E_CardApp.swift */; };
+		42A041072D442E7300D0B9DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A041062D442E7300D0B9DA /* ContentView.swift */; };
+		42A041092D442E7300D0B9DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A041082D442E7300D0B9DA /* Item.swift */; };
+		42A0410B2D442E7600D0B9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A0410A2D442E7600D0B9DA /* Assets.xcassets */; };
+		42A0410E2D442E7600D0B9DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A0410D2D442E7600D0B9DA /* Preview Assets.xcassets */; };
+		42A041182D442E7600D0B9DA /* E_CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A041172D442E7600D0B9DA /* E_CardTests.swift */; };
+		42A6696A2D482D0900C2B0CB /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A669692D482D0900C2B0CB /* RulesView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42A041142D442E7600D0B9DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42A040F92D442E7300D0B9DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42A041002D442E7300D0B9DA;
+			remoteInfo = "E-Card";
+		};
+		42A0411E2D442E7600D0B9DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42A040F92D442E7300D0B9DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42A041002D442E7300D0B9DA;
+			remoteInfo = "E-Card";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42778F742D4432BE007C075A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		42778F792D443610007C075A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		42778F7E2D443B5B007C075A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		42778F842D443F46007C075A /* Saira.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Saira.ttf; sourceTree = "<group>"; };
+		42778F892D4442D8007C075A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		42778F8B2D444D5E007C075A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		42778F8E2D45569C007C075A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		42778F902D45572A007C075A /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		42778F922D4642DB007C075A /* Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extras.swift; sourceTree = "<group>"; };
+		42778F952D4652CA007C075A /* CardDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDropDelegate.swift; sourceTree = "<group>"; };
+		42A041012D442E7300D0B9DA /* E-Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A041042D442E7300D0B9DA /* E_CardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_CardApp.swift; sourceTree = "<group>"; };
+		42A041062D442E7300D0B9DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		42A041082D442E7300D0B9DA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		42A0410A2D442E7600D0B9DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42A0410D2D442E7600D0B9DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		42A041132D442E7600D0B9DA /* E-CardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-CardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A041172D442E7600D0B9DA /* E_CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_CardTests.swift; sourceTree = "<group>"; };
+		42A0411D2D442E7600D0B9DA /* E-CardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-CardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A669692D482D0900C2B0CB /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42A040FE2D442E7300D0B9DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A041102D442E7600D0B9DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A0411A2D442E7600D0B9DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42778F782D443600007C075A /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				42778F792D443610007C075A /* Extensions.swift */,
+				42778F922D4642DB007C075A /* Extras.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		42778F7D2D443B4B007C075A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				42778F7E2D443B5B007C075A /* MenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		42778F832D443F02007C075A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				42778F842D443F46007C075A /* Saira.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		42778F8A2D444D4A007C075A /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				42778F8B2D444D5E007C075A /* CardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		42778F8D2D455685007C075A /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				42778F8E2D45569C007C075A /* GameView.swift */,
+				42778F902D45572A007C075A /* GameViewModel.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		42778F942D464FF3007C075A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				42778F952D4652CA007C075A /* CardDropDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		42A040F82D442E7300D0B9DA = {
+			isa = PBXGroup;
+			children = (
+				42A041032D442E7300D0B9DA /* E-Card */,
+				42A041162D442E7600D0B9DA /* E-CardTests */,
+				42A041022D442E7300D0B9DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42A041022D442E7300D0B9DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42A041012D442E7300D0B9DA /* E-Card.app */,
+				42A041132D442E7600D0B9DA /* E-CardTests.xctest */,
+				42A0411D2D442E7600D0B9DA /* E-CardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42A041032D442E7300D0B9DA /* E-Card */ = {
+			isa = PBXGroup;
+			children = (
+				42A669662D482CCD00C2B0CB /* RulesView */,
+				42778F942D464FF3007C075A /* Delegates */,
+				42778F8D2D455685007C075A /* GameView */,
+				42778F8A2D444D4A007C075A /* Card */,
+				42778F892D4442D8007C075A /* Info.plist */,
+				42778F832D443F02007C075A /* Fonts */,
+				42778F7D2D443B4B007C075A /* Menu */,
+				42778F782D443600007C075A /* Misc */,
+				42A041302D44324200D0B9DA /* Models */,
+				42A041042D442E7300D0B9DA /* E_CardApp.swift */,
+				42A041062D442E7300D0B9DA /* ContentView.swift */,
+				42A041082D442E7300D0B9DA /* Item.swift */,
+				42A0410A2D442E7600D0B9DA /* Assets.xcassets */,
+				42A0410C2D442E7600D0B9DA /* Preview Content */,
+			);
+			path = "E-Card";
+			sourceTree = "<group>";
+		};
+		42A0410C2D442E7600D0B9DA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				42A0410D2D442E7600D0B9DA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		42A041162D442E7600D0B9DA /* E-CardTests */ = {
+			isa = PBXGroup;
+			children = (
+				42A041172D442E7600D0B9DA /* E_CardTests.swift */,
+			);
+			path = "E-CardTests";
+			sourceTree = "<group>";
+		};
+		42A041302D44324200D0B9DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42778F742D4432BE007C075A /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42A669662D482CCD00C2B0CB /* RulesView */ = {
+			isa = PBXGroup;
+			children = (
+				42A669692D482D0900C2B0CB /* RulesView.swift */,
+			);
+			path = RulesView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42A041002D442E7300D0B9DA /* E-Card */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A041272D442E7600D0B9DA /* Build configuration list for PBXNativeTarget "E-Card" */;
+			buildPhases = (
+				42A040FD2D442E7300D0B9DA /* Sources */,
+				42A040FE2D442E7300D0B9DA /* Frameworks */,
+				42A040FF2D442E7300D0B9DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "E-Card";
+			productName = "E-Card";
+			productReference = 42A041012D442E7300D0B9DA /* E-Card.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42A041122D442E7600D0B9DA /* E-CardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A0412A2D442E7600D0B9DA /* Build configuration list for PBXNativeTarget "E-CardTests" */;
+			buildPhases = (
+				42A0410F2D442E7600D0B9DA /* Sources */,
+				42A041102D442E7600D0B9DA /* Frameworks */,
+				42A041112D442E7600D0B9DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42A041152D442E7600D0B9DA /* PBXTargetDependency */,
+			);
+			name = "E-CardTests";
+			productName = "E-CardTests";
+			productReference = 42A041132D442E7600D0B9DA /* E-CardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		42A0411C2D442E7600D0B9DA /* E-CardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A0412D2D442E7600D0B9DA /* Build configuration list for PBXNativeTarget "E-CardUITests" */;
+			buildPhases = (
+				42A041192D442E7600D0B9DA /* Sources */,
+				42A0411A2D442E7600D0B9DA /* Frameworks */,
+				42A0411B2D442E7600D0B9DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42A0411F2D442E7600D0B9DA /* PBXTargetDependency */,
+			);
+			name = "E-CardUITests";
+			productName = "E-CardUITests";
+			productReference = 42A0411D2D442E7600D0B9DA /* E-CardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42A040F92D442E7300D0B9DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					42A041002D442E7300D0B9DA = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					42A041122D442E7600D0B9DA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 42A041002D442E7300D0B9DA;
+					};
+					42A0411C2D442E7600D0B9DA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 42A041002D442E7300D0B9DA;
+					};
+				};
+			};
+			buildConfigurationList = 42A040FC2D442E7300D0B9DA /* Build configuration list for PBXProject "E-Card" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42A040F82D442E7300D0B9DA;
+			productRefGroup = 42A041022D442E7300D0B9DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42A041002D442E7300D0B9DA /* E-Card */,
+				42A041122D442E7600D0B9DA /* E-CardTests */,
+				42A0411C2D442E7600D0B9DA /* E-CardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42A040FF2D442E7300D0B9DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42778F852D443F46007C075A /* Saira.ttf in Resources */,
+				42A0410E2D442E7600D0B9DA /* Preview Assets.xcassets in Resources */,
+				42A0410B2D442E7600D0B9DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A041112D442E7600D0B9DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A0411B2D442E7600D0B9DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42A040FD2D442E7300D0B9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42778F912D45572A007C075A /* GameViewModel.swift in Sources */,
+				42778F962D4652CA007C075A /* CardDropDelegate.swift in Sources */,
+				42778F8C2D444D5E007C075A /* CardView.swift in Sources */,
+				42778F932D4642DB007C075A /* Extras.swift in Sources */,
+				42778F822D443C8B007C075A /* MenuView.swift in Sources */,
+				42778F7A2D443610007C075A /* Extensions.swift in Sources */,
+				42A041072D442E7300D0B9DA /* ContentView.swift in Sources */,
+				42A041092D442E7300D0B9DA /* Item.swift in Sources */,
+				42A6696A2D482D0900C2B0CB /* RulesView.swift in Sources */,
+				42A041052D442E7300D0B9DA /* E_CardApp.swift in Sources */,
+				42778F8F2D45569C007C075A /* GameView.swift in Sources */,
+				42778F752D4432BE007C075A /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A0410F2D442E7600D0B9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42A041182D442E7600D0B9DA /* E_CardTests.swift in Sources */,
+				42778F7B2D443610007C075A /* Extensions.swift in Sources */,
+				42778F762D4432BE007C075A /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A041192D442E7600D0B9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42778F772D4432BE007C075A /* Card.swift in Sources */,
+				42778F7C2D443610007C075A /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42A041152D442E7600D0B9DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42A041002D442E7300D0B9DA /* E-Card */;
+			targetProxy = 42A041142D442E7600D0B9DA /* PBXContainerItemProxy */;
+		};
+		42A0411F2D442E7600D0B9DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42A041002D442E7300D0B9DA /* E-Card */;
+			targetProxy = 42A0411E2D442E7600D0B9DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		42A041252D442E7600D0B9DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		42A041262D442E7600D0B9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42A041282D442E7600D0B9DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"E-Card/Preview Content\"";
+				DEVELOPMENT_TEAM = 77Q6WHQ789;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "E-Card/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.lukas.zima.E-Card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42A041292D442E7600D0B9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"E-Card/Preview Content\"";
+				DEVELOPMENT_TEAM = 77Q6WHQ789;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "E-Card/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.lukas.zima.E-Card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		42A0412B2D442E7600D0B9DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77Q6WHQ789;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.lukas.zima.E-CardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E-Card.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/E-Card";
+			};
+			name = Debug;
+		};
+		42A0412C2D442E7600D0B9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77Q6WHQ789;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.lukas.zima.E-CardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E-Card.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/E-Card";
+			};
+			name = Release;
+		};
+		42A0412E2D442E7600D0B9DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77Q6WHQ789;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "E-CardUITests/Info.plist";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.lukas.zima.E-CardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "E-Card";
+			};
+			name = Debug;
+		};
+		42A0412F2D442E7600D0B9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77Q6WHQ789;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "E-CardUITests/Info.plist";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.lukas.zima.E-CardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "E-Card";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42A040FC2D442E7300D0B9DA /* Build configuration list for PBXProject "E-Card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A041252D442E7600D0B9DA /* Debug */,
+				42A041262D442E7600D0B9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42A041272D442E7600D0B9DA /* Build configuration list for PBXNativeTarget "E-Card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A041282D442E7600D0B9DA /* Debug */,
+				42A041292D442E7600D0B9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42A0412A2D442E7600D0B9DA /* Build configuration list for PBXNativeTarget "E-CardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A0412B2D442E7600D0B9DA /* Debug */,
+				42A0412C2D442E7600D0B9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42A0412D2D442E7600D0B9DA /* Build configuration list for PBXNativeTarget "E-CardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A0412E2D442E7600D0B9DA /* Debug */,
+				42A0412F2D442E7600D0B9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42A040F92D442E7300D0B9DA /* Project object */;
+}
