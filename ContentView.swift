@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-        GameView(viewModel: .init(cards: Card.cardsPreview))
+        //GameView(viewModel: .init(cards: Card.cardsPreview))
+        RulesView()
     }
 }
 
