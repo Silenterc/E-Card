@@ -27,6 +27,10 @@
 		42A0410E2D442E7600D0B9DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A0410D2D442E7600D0B9DA /* Preview Assets.xcassets */; };
 		42A041182D442E7600D0B9DA /* E_CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A041172D442E7600D0B9DA /* E_CardTests.swift */; };
 		42A6696A2D482D0900C2B0CB /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A669692D482D0900C2B0CB /* RulesView.swift */; };
+		42B18C4F2D526D6000A204E0 /* ECardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C4E2D526D6000A204E0 /* ECardGame.swift */; };
+		42B18C522D526E1400A204E0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B18C512D526E1400A204E0 /* GameKit.framework */; };
+		42B18C542D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C532D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift */; };
+		42B18C562D5270E600A204E0 /* ECardGame+MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C552D5270E600A204E0 /* ECardGame+MatchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,11 @@
 		42A041172D442E7600D0B9DA /* E_CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_CardTests.swift; sourceTree = "<group>"; };
 		42A0411D2D442E7600D0B9DA /* E-CardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-CardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A669692D482D0900C2B0CB /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		42B18C4E2D526D6000A204E0 /* ECardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECardGame.swift; sourceTree = "<group>"; };
+		42B18C512D526E1400A204E0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		42B18C532D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		42B18C552D5270E600A204E0 /* ECardGame+MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ECardGame+MatchData.swift"; sourceTree = "<group>"; };
+		42B18C572D527A5300A204E0 /* E-Card.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "E-Card.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B18C522D526E1400A204E0 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +159,7 @@
 			children = (
 				42A041032D442E7300D0B9DA /* E-Card */,
 				42A041162D442E7600D0B9DA /* E-CardTests */,
+				42B18C502D526E1400A204E0 /* Frameworks */,
 				42A041022D442E7300D0B9DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,6 +177,8 @@
 		42A041032D442E7300D0B9DA /* E-Card */ = {
 			isa = PBXGroup;
 			children = (
+				42B18C572D527A5300A204E0 /* E-Card.entitlements */,
+				42B18C4D2D516E7600A204E0 /* GameKitStuff */,
 				42A669662D482CCD00C2B0CB /* RulesView */,
 				42778F942D464FF3007C075A /* Delegates */,
 				42778F8D2D455685007C075A /* GameView */,
@@ -214,6 +227,24 @@
 				42A669692D482D0900C2B0CB /* RulesView.swift */,
 			);
 			path = RulesView;
+			sourceTree = "<group>";
+		};
+		42B18C4D2D516E7600A204E0 /* GameKitStuff */ = {
+			isa = PBXGroup;
+			children = (
+				42B18C532D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift */,
+				42B18C4E2D526D6000A204E0 /* ECardGame.swift */,
+				42B18C552D5270E600A204E0 /* ECardGame+MatchData.swift */,
+			);
+			path = GameKitStuff;
+			sourceTree = "<group>";
+		};
+		42B18C502D526E1400A204E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42B18C512D526E1400A204E0 /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,11 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				42778F912D45572A007C075A /* GameViewModel.swift in Sources */,
+				42B18C562D5270E600A204E0 /* ECardGame+MatchData.swift in Sources */,
 				42778F962D4652CA007C075A /* CardDropDelegate.swift in Sources */,
+				42B18C542D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift in Sources */,
 				42778F8C2D444D5E007C075A /* CardView.swift in Sources */,
 				42778F932D4642DB007C075A /* Extras.swift in Sources */,
 				42778F822D443C8B007C075A /* MenuView.swift in Sources */,
 				42778F7A2D443610007C075A /* Extensions.swift in Sources */,
+				42B18C4F2D526D6000A204E0 /* ECardGame.swift in Sources */,
 				42A041072D442E7300D0B9DA /* ContentView.swift in Sources */,
 				42A041092D442E7300D0B9DA /* Item.swift in Sources */,
 				42A6696A2D482D0900C2B0CB /* RulesView.swift in Sources */,
@@ -521,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "E-Card/E-Card.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"E-Card/Preview Content\"";
@@ -551,6 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "E-Card/E-Card.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"E-Card/Preview Content\"";

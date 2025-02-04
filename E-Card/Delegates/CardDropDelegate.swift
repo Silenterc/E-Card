@@ -22,7 +22,7 @@ struct CardDropDelegate: DropDelegate {
      */
     func performDrop(info: DropInfo) -> Bool {
         // There cannot be a Card already on the table
-        if let tableCard {
+        if tableCard != nil {
             draggedCard = nil
             return false
         }

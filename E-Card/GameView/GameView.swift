@@ -153,5 +153,5 @@ struct SideBar<Content: View> : View {
     for _ in 0..<num {
         cards.append(.init(cardType: .Citizen))
     }
-    return GameView(viewModel: .init(cards: cards))
+    return GameView(viewModel: .init(game: .init(), cards: cards))
 }

@@ -11,6 +11,8 @@ import SwiftUI
  */
 @Observable
 class GameViewModel {
+    // The Game object
+    var game: ECardGame
     // Cards in Hand
     var cards: [Card]
     // My Card on the Table
@@ -62,7 +64,8 @@ class GameViewModel {
     }
     
     
-    init(cards: [Card], screenSize: CGSize = .init(width: 393, height: 700)) {
+    init(game: ECardGame, cards: [Card], screenSize: CGSize = .init(width: 393, height: 700)) {
+        self.game = game
         self.cards = cards
         self.screenSize = screenSize
     }

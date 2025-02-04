@@ -10,6 +10,7 @@ import SwiftUI
  The central Menu View
  */
 struct MenuView: View {
+    @State var game: ECardGame
     var body: some View {
         VStack {
             title("E-Card")
@@ -23,7 +24,13 @@ struct MenuView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(LinearGradient.kaijiGradient())
+        .onAppear {
+            if !game.playingGame {
+                game.authenticatePlayer()
+            }
+        }
     }
+    
     
     func menuOptions() -> some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -32,6 +39,7 @@ struct MenuView: View {
             } label: {
                 MenuText(text: "Start A Game", size: 32, symbol: "play")
             }
+            .disabled(!game.matchAvailable)
             Button {
                 // TODO: Show Rules
             } label: {
@@ -70,5 +78,5 @@ struct MenuText : View {
 }
 
 #Preview {
-    MenuView()
+    MenuView(game: .init())
 }
