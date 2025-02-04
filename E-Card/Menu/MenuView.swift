@@ -11,6 +11,7 @@ import SwiftUI
  */
 struct MenuView: View {
     @State var game: ECardGame
+    @EnvironmentObject var appCoordinator: AppCoordinator
     var body: some View {
         VStack {
             title("E-Card")
@@ -41,7 +42,7 @@ struct MenuView: View {
             }
             .disabled(!game.matchAvailable)
             Button {
-                // TODO: Show Rules
+                appCoordinator.push(.rules)
             } label: {
                 MenuText(text: "Rules", size: 32, symbol: "book")
             }

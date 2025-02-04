@@ -12,7 +12,6 @@ import SwiftUI
 /*
 The main class that implements the logic for the ECard turn-based game.
 */
-@MainActor
 @Observable
 class ECardGame: NSObject, GKMatchDelegate, GKLocalPlayerListener {
     // The game interface state.

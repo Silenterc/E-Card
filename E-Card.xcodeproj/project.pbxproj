@@ -31,6 +31,8 @@
 		42B18C522D526E1400A204E0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B18C512D526E1400A204E0 /* GameKit.framework */; };
 		42B18C542D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C532D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift */; };
 		42B18C562D5270E600A204E0 /* ECardGame+MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C552D5270E600A204E0 /* ECardGame+MatchData.swift */; };
+		42B18C5A2D5284A800A204E0 /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C592D5284A800A204E0 /* AppCoordinatorProtocol.swift */; };
+		42B18C5C2D52866500A204E0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C5B2D52866500A204E0 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		42B18C532D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		42B18C552D5270E600A204E0 /* ECardGame+MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ECardGame+MatchData.swift"; sourceTree = "<group>"; };
 		42B18C572D527A5300A204E0 /* E-Card.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "E-Card.entitlements"; sourceTree = "<group>"; };
+		42B18C592D5284A800A204E0 /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		42B18C5B2D52866500A204E0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 		42A041032D442E7300D0B9DA /* E-Card */ = {
 			isa = PBXGroup;
 			children = (
+				42B18C582D52847F00A204E0 /* NavigationCoordinator */,
 				42B18C572D527A5300A204E0 /* E-Card.entitlements */,
 				42B18C4D2D516E7600A204E0 /* GameKitStuff */,
 				42A669662D482CCD00C2B0CB /* RulesView */,
@@ -245,6 +250,15 @@
 				42B18C512D526E1400A204E0 /* GameKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42B18C582D52847F00A204E0 /* NavigationCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				42B18C592D5284A800A204E0 /* AppCoordinatorProtocol.swift */,
+				42B18C5B2D52866500A204E0 /* AppCoordinator.swift */,
+			);
+			path = NavigationCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +394,7 @@
 			files = (
 				42778F912D45572A007C075A /* GameViewModel.swift in Sources */,
 				42B18C562D5270E600A204E0 /* ECardGame+MatchData.swift in Sources */,
+				42B18C5C2D52866500A204E0 /* AppCoordinator.swift in Sources */,
 				42778F962D4652CA007C075A /* CardDropDelegate.swift in Sources */,
 				42B18C542D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift in Sources */,
 				42778F8C2D444D5E007C075A /* CardView.swift in Sources */,
@@ -392,6 +407,7 @@
 				42A6696A2D482D0900C2B0CB /* RulesView.swift in Sources */,
 				42A041052D442E7300D0B9DA /* E_CardApp.swift in Sources */,
 				42778F8F2D45569C007C075A /* GameView.swift in Sources */,
+				42B18C5A2D5284A800A204E0 /* AppCoordinatorProtocol.swift in Sources */,
 				42778F752D4432BE007C075A /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

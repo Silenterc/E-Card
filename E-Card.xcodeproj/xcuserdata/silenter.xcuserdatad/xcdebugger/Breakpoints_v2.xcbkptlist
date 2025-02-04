@@ -14,9 +14,9 @@
             filePath = "E-Card/GameView/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "tableHeight"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "cards"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "E-Card/GameView/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "tableWidth"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "cards"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,9 @@
             filePath = "E-Card/GameView/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "myCardsWidthBase"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "cards"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,8 +62,8 @@
             filePath = "E-Card/GameKitStuff/ECardGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "authenticatePlayer()"
             landmarkType = "7">
          </BreakpointContent>

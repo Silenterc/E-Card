@@ -14,11 +14,32 @@ class GameViewModel {
     // The Game object
     var game: ECardGame
     // Cards in Hand
-    var cards: [Card]
+    var cards: [Card] {
+        get {
+            game.localParticipant?.cards ?? []
+        }
+        set(newCards) {
+            game.localParticipant?.cards = newCards
+        }
+    }
     // My Card on the Table
-    var tableCardMine: Card?
+    var tableCardMine: Card? {
+        get {
+            game.localParticipant?.playedCard
+        }
+        set(newCard) {
+            game.localParticipant?.playedCard = newCard
+        }
+    }
     // Enemy Players Card on the Table
-    var tableCardEnemy: Card?
+    var tableCardEnemy: Card? {
+        get {
+            game.opponent?.playedCard
+        }
+        set(newCard) {
+            game.opponent?.playedCard = newCard
+        }
+    }
     // Size of the screen (for UI calculations)
     var screenSize: CGSize
 
@@ -64,9 +85,8 @@ class GameViewModel {
     }
     
     
-    init(game: ECardGame, cards: [Card], screenSize: CGSize = .init(width: 393, height: 700)) {
+    init(game: ECardGame, screenSize: CGSize = .init(width: 393, height: 700)) {
         self.game = game
-        self.cards = cards
         self.screenSize = screenSize
     }
     /**
