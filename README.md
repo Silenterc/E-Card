@@ -52,3 +52,12 @@ After each round:
 ### Winning the Game
 - After all **12 matches** have been played:
   - The player with the most victories wins the game.
+
+# Development progress
+- I started working on the UI
+- The Menu and Rules screens have ready prototypes, the Game screen is a heavy WIP right now.
+
+| The Menu Screen (WIP) | The Rules Screen (WIP) | The Game Screen (WIP) |
+|----------------------|----------------------|----------------------|
+| <img src="Media/MenuWIP.png" alt="Menu" width="300"> | <img src="Media/RulesWIP.gif" alt="Rules" width="300"> | <img src="Media/GameWIP.gif" alt="Game" width="300"> |
+
