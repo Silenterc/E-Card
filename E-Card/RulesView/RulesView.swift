@@ -64,6 +64,7 @@ struct RulesView: View {
             .scrollContentBackground(.hidden)
             Spacer()
         }
+        .padding(.top, screenSize.height * 0.05)
         .background(LinearGradient.kaijiGradient())
     }
     

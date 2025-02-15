@@ -23,12 +23,42 @@ struct Participant: Identifiable {
     var avatar = Image(systemName: "person")
     var cards: [Card] = []
     var playedCard: Card? = nil
+    var isEmperorSide: Bool
 }
 
 // Codable game data for sending to players.
 struct GameData: Codable {
+    var group: Int
+    var round: Int
     var cards: [String: [Card]]
     var table: [String: Card?]
+    var emperorSide: String
+}
+
+struct GameState {
+    var group: Int
+    var round: Int
+    var emperorSide: Participant?
+    var slaveSide: Participant?
+    
+    init(group: Int = 1, round: Int = 1, emperorSide: Participant? = nil, slaveSide: Participant? = nil) {
+        self.group = group
+        self.round = round
+        self.emperorSide = emperorSide
+        self.slaveSide = slaveSide
+    }
+    
+    mutating func updateFromData(matchData: GameData) {
+        group = matchData.group
+        round = matchData.round
+        guard var emperor = emperorSide, var slave = slaveSide else {
+            return
+        }
+        // If the sides swapped, we swap
+        if matchData.emperorSide != emperor.player.displayName {
+            swap(&emperor, &slave)
+        }
+    }
 }
 
 extension ECardGame {
@@ -54,7 +84,7 @@ extension ECardGame {
             table[opponentPlayerName] = opponent?.playedCard
         }
         
-        let gameData = GameData(cards: cards, table: table)
+        let gameData = GameData(group: gameState!.group, round: gameState!.round, cards: cards, table: table, emperorSide: gameState!.emperorSide?.player.displayName ?? "")
         return encode(gameData: gameData)
     }
     
@@ -80,6 +110,8 @@ extension ECardGame {
     func decodeGameData(matchData: Data) {
         let gameData = try? PropertyListDecoder().decode(GameData.self, from: matchData)
         guard let gameData = gameData else { return }
+        // Update the game state
+        gameState?.updateFromData(matchData: gameData)
         
         // Set the local player's items and last played Card.
         if let localPlayerName = localParticipant?.player.displayName {

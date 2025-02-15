@@ -24,6 +24,7 @@ struct MenuView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.top, 32)
         .background(LinearGradient.kaijiGradient())
         .onAppear {
             if !game.playingGame {
@@ -36,7 +37,7 @@ struct MenuView: View {
     func menuOptions() -> some View {
         VStack(alignment: .leading, spacing: 20) {
             Button {
-                // TODO: Start Game
+                game.startMatch()
             } label: {
                 MenuText(text: "Start A Game", size: 32, symbol: "play")
             }
@@ -79,5 +80,5 @@ struct MenuText : View {
 }
 
 #Preview {
-    MenuView(game: .init())
+    MenuView(game: .init(appCoordinator: AppCoordinator()))
 }

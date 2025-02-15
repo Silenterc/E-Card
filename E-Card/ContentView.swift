@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var appCoordinator: AppCoordinator = AppCoordinator()
-    var game: ECardGame = ECardGame()
+    @StateObject var appCoordinator: AppCoordinator = AppContainer.shared.resolve(AppCoordinator.self)
+    var game: ECardGame = AppContainer.shared.resolve(ECardGame.self)
     var body: some View {
         NavigationStack(path: $appCoordinator.path) {
             appCoordinator.build(.menu(game: game))
@@ -24,6 +24,7 @@ struct ContentView: View {
             //RulesView()
             //MenuView(game: ECardGame())
         }
+        .tint(.white)
         .environmentObject(appCoordinator)
     }
 }

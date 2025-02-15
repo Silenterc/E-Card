@@ -33,6 +33,11 @@
 		42B18C562D5270E600A204E0 /* ECardGame+MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C552D5270E600A204E0 /* ECardGame+MatchData.swift */; };
 		42B18C5A2D5284A800A204E0 /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C592D5284A800A204E0 /* AppCoordinatorProtocol.swift */; };
 		42B18C5C2D52866500A204E0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C5B2D52866500A204E0 /* AppCoordinator.swift */; };
+		42B18C5E2D53CE6A00A204E0 /* ECardGame+GKTurnBasedEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B18C5D2D53CE6A00A204E0 /* ECardGame+GKTurnBasedEventListener.swift */; };
+		42CD49FC2D6120E500A8D91A /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD49FB2D6120E500A8D91A /* Container.swift */; };
+		42CD49FD2D6120E500A8D91A /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD49FB2D6120E500A8D91A /* Container.swift */; };
+		42CD49FE2D6120E500A8D91A /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD49FB2D6120E500A8D91A /* Container.swift */; };
+		42CD4A002D6120F700A8D91A /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD49FF2D6120F700A8D91A /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,8 @@
 		42B18C572D527A5300A204E0 /* E-Card.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "E-Card.entitlements"; sourceTree = "<group>"; };
 		42B18C592D5284A800A204E0 /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		42B18C5B2D52866500A204E0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		42B18C5D2D53CE6A00A204E0 /* ECardGame+GKTurnBasedEventListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ECardGame+GKTurnBasedEventListener.swift"; sourceTree = "<group>"; };
+		42CD49FB2D6120E500A8D91A /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42B18C522D526E1400A204E0 /* GameKit.framework in Frameworks */,
+				42CD4A002D6120F700A8D91A /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +121,7 @@
 			children = (
 				42778F792D443610007C075A /* Extensions.swift */,
 				42778F922D4642DB007C075A /* Extras.swift */,
+				42CD49FB2D6120E500A8D91A /* Container.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 				42B18C532D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift */,
 				42B18C4E2D526D6000A204E0 /* ECardGame.swift */,
 				42B18C552D5270E600A204E0 /* ECardGame+MatchData.swift */,
+				42B18C5D2D53CE6A00A204E0 /* ECardGame+GKTurnBasedEventListener.swift */,
 			);
 			path = GameKitStuff;
 			sourceTree = "<group>";
@@ -349,6 +359,9 @@
 				Base,
 			);
 			mainGroup = 42A040F82D442E7300D0B9DA;
+			packageReferences = (
+				42CD49FA2D61207800A8D91A /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 42A041022D442E7300D0B9DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,11 +409,13 @@
 				42B18C562D5270E600A204E0 /* ECardGame+MatchData.swift in Sources */,
 				42B18C5C2D52866500A204E0 /* AppCoordinator.swift in Sources */,
 				42778F962D4652CA007C075A /* CardDropDelegate.swift in Sources */,
+				42CD49FD2D6120E500A8D91A /* Container.swift in Sources */,
 				42B18C542D526F3300A204E0 /* ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift in Sources */,
 				42778F8C2D444D5E007C075A /* CardView.swift in Sources */,
 				42778F932D4642DB007C075A /* Extras.swift in Sources */,
 				42778F822D443C8B007C075A /* MenuView.swift in Sources */,
 				42778F7A2D443610007C075A /* Extensions.swift in Sources */,
+				42B18C5E2D53CE6A00A204E0 /* ECardGame+GKTurnBasedEventListener.swift in Sources */,
 				42B18C4F2D526D6000A204E0 /* ECardGame.swift in Sources */,
 				42A041072D442E7300D0B9DA /* ContentView.swift in Sources */,
 				42A041092D442E7300D0B9DA /* Item.swift in Sources */,
@@ -417,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A041182D442E7600D0B9DA /* E_CardTests.swift in Sources */,
+				42CD49FE2D6120E500A8D91A /* Container.swift in Sources */,
 				42778F7B2D443610007C075A /* Extensions.swift in Sources */,
 				42778F762D4432BE007C075A /* Card.swift in Sources */,
 			);
@@ -427,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42778F772D4432BE007C075A /* Card.swift in Sources */,
+				42CD49FC2D6120E500A8D91A /* Container.swift in Sources */,
 				42778F7C2D443610007C075A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -746,6 +763,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42CD49FA2D61207800A8D91A /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42CD49FF2D6120F700A8D91A /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42CD49FA2D61207800A8D91A /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42A040F92D442E7300D0B9DA /* Project object */;
 }

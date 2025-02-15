@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
+import GameKit
 /**
  The UI for the E-Card Game
  */
@@ -148,10 +149,14 @@ struct SideBar<Content: View> : View {
 }
 
 #Preview {
-    let num = 5
-    var cards: [Card] = .init()
-    for _ in 0..<num {
-        cards.append(.init(cardType: .Citizen))
-    }
-    return GameView(viewModel: .init(game: .init()))
+//    let num = 5
+//    var cards: [Card] = .init()
+//    for _ in 0..<num {
+//        cards.append(.init(cardType: .Citizen))
+//    }
+    var game = ECardGame(appCoordinator: AppCoordinator())
+    var participant = Participant(player: .anonymousGuestPlayer(withIdentifier: "id"), isEmperorSide: true)
+    participant.cards = Card.emperorSide
+    game.localParticipant = participant
+    return GameView(viewModel: .init(game: game))
 }

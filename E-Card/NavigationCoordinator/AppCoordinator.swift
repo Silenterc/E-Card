@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 class AppCoordinator: AppCoordinatorProtocol {
-    
     @Published var path: NavigationPath = NavigationPath()
     @Published var sheet: Sheet?
     
     func push(_ screen: Screen) {
         path.append(screen)
+        print(path)
     }
     
     func presentSheet(_ sheet: Sheet) {
