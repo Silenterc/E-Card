@@ -56,9 +56,6 @@ extension ECardGame: GKTurnBasedEventListener {
                     // If the local player isn't playing another match or is playing this match,
                     // display and update the game view.
                     
-                    // Update the interface depending on whether it's the local player's turn.
-                    myTurn = GKLocalPlayer.local == match.currentParticipant?.player ? true : false
-                    
                     // Remove the local player from the participants to find the opponent.
                     let participants = match.participants.filter {
                         self.localParticipant?.player.displayName != $0.player?.displayName
@@ -77,7 +74,7 @@ extension ECardGame: GKTurnBasedEventListener {
                         }
                     }
                     // Restore the current game data from the match object.
-                    if let matchData = match.matchData, let state = gameState  {
+                    if let matchData = match.matchData, gameState != nil  {
                         // TODO: ADD ONGOING GAME LOGIC
                         decodeGameData(matchData: matchData)
                         
@@ -85,8 +82,14 @@ extension ECardGame: GKTurnBasedEventListener {
                         // The game is brand new and this is our first turn, we need to initialize the state
                         initGameState()
                     }
-                    playingGame = true
-                    appCoordinator.push(.game(game: self))
+                    
+                    // Update the interface depending on whether it's the local player's turn.
+                    myTurn = GKLocalPlayer.local == match.currentParticipant?.player ? true : false
+                    
+                    // Present the Game in case we opened it for the first time
+                    if !playingGame {
+                        appCoordinator.push(.game(game: self))
+                    }
                     // Retain the match ID so action methods can load the current match object later.
                     currentMatchID = match.matchID
                 }
@@ -98,6 +101,7 @@ extension ECardGame: GKTurnBasedEventListener {
             print("Match ended.")
             
         case .matching:
+            // TODO: LET A PLAYER SEE A MATCHING MATCH
             print("Still finding players.")
             
         default:

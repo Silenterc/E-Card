@@ -40,6 +40,19 @@ class GameViewModel {
             game.opponent?.playedCard = newCard
         }
     }
+    // Game State
+    var gameState: GameState? {
+        get {
+            game.gameState
+        }
+        set(newState) {
+            game.gameState = newState
+        }
+    }
+    // My Turn?
+    var myTurn: Bool {
+        game.myTurn
+    }
     // Size of the screen (for UI calculations)
     var screenSize: CGSize
 
@@ -154,5 +167,11 @@ class GameViewModel {
         let yScaling = 1.2
         let yOffset = myCardsWidth * yScaling
         return .init(width: xOffset, height: -1 * yOffset)
+    }
+    /**
+     Takes a Turn
+     */
+    func takeTurn() {
+        game.takeTurn()
     }
 }

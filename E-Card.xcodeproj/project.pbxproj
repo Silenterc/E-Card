@@ -38,6 +38,7 @@
 		42CD49FD2D6120E500A8D91A /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD49FB2D6120E500A8D91A /* Container.swift */; };
 		42CD49FE2D6120E500A8D91A /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD49FB2D6120E500A8D91A /* Container.swift */; };
 		42CD4A002D6120F700A8D91A /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD49FF2D6120F700A8D91A /* Swinject */; };
+		42CD4A052D625D4300A8D91A /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD4A042D625D4300A8D91A /* StepperView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CD4A052D625D4300A8D91A /* StepperView in Frameworks */,
 				42B18C522D526E1400A204E0 /* GameKit.framework in Frameworks */,
 				42CD4A002D6120F700A8D91A /* Swinject in Frameworks */,
 			);
@@ -361,6 +363,7 @@
 			mainGroup = 42A040F82D442E7300D0B9DA;
 			packageReferences = (
 				42CD49FA2D61207800A8D91A /* XCRemoteSwiftPackageReference "Swinject" */,
+				42CD4A032D625D4300A8D91A /* XCRemoteSwiftPackageReference "StepperView" */,
 			);
 			productRefGroup = 42A041022D442E7300D0B9DA /* Products */;
 			projectDirPath = "";
@@ -773,6 +776,14 @@
 				minimumVersion = 2.9.1;
 			};
 		};
+		42CD4A032D625D4300A8D91A /* XCRemoteSwiftPackageReference "StepperView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/badrinathvm/StepperView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -780,6 +791,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42CD49FA2D61207800A8D91A /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		42CD4A042D625D4300A8D91A /* StepperView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42CD4A032D625D4300A8D91A /* XCRemoteSwiftPackageReference "StepperView" */;
+			productName = StepperView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

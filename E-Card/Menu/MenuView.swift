@@ -27,7 +27,7 @@ struct MenuView: View {
         .padding(.top, 32)
         .background(LinearGradient.kaijiGradient())
         .onAppear {
-            if !game.playingGame {
+            if !game.matchAvailable {
                 game.authenticatePlayer()
             }
         }

@@ -23,9 +23,43 @@ struct GameView: View {
             HStack {
                 Spacer()
                 SideBar(isExpanded: $viewModel.isExpandedSidebar, width: viewModel.sidebarWidth, height: viewModel.sidebarHeight) {
-                    Text("Rounds: 5")
-                    Text("Groups: 3")
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Group: \(viewModel.gameState?.group ?? 0)")
+                            .foregroundStyle(.black)
+                        StepIndicator(steps: 4, currentStep: viewModel.gameState?.group ?? 0, spacing: viewModel.sidebarWidth * 0.08)
+                    }
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Round: \(viewModel.gameState?.round ?? 0)")
+                            .foregroundStyle(.black)
+                        StepIndicator(steps: 3, currentStep: viewModel.gameState?.round ?? 0, spacing: viewModel.sidebarWidth * 0.08)
+                    }
                     Spacer()
+                    HStack {
+                        Button {
+                            // TODO: FORFEIT MATCH
+                        } label: {
+                            Text("Forfeit Match")
+                                .font(.system(size: 10))
+                                .lineLimit(2)
+                        }
+                        .tint(.red)
+                        .buttonStyle(.bordered)
+                        .buttonBorderShape(.roundedRectangle)
+                        Button() {
+                            // TODO: TAKE TURN
+                            viewModel.takeTurn()
+                        } label: {
+                            Text("End Turn")
+                                .font(.system(size: 10))
+                                .lineLimit(2)
+                        }
+                        .tint(.blue)
+                        .buttonStyle(.bordered)
+                        .buttonBorderShape(.roundedRectangle)
+                        .disabled(viewModel.tableCardMine == nil || !viewModel.myTurn)
+                        .animation(.easeInOut(duration: 0.2), value: viewModel.tableCardMine)
+                        .animation(.easeInOut(duration: 0.2), value: viewModel.myTurn)
+                    }
                 }
             }
         }
@@ -50,6 +84,9 @@ struct GameView: View {
                     .shadow(color: viewModel.isFocusedHand ? .black : .clear, radius: 4, x: 12, y: 16)
                     .opacity(card.id == viewModel.draggedCard?.id ? 0 : 100)
                     .onDrag {
+                        guard viewModel.myTurn else {
+                            return NSItemProvider()
+                        }
                         viewModel.draggedCard = card
                         let prov = ClosureItemProvider {
                             viewModel.draggedCard = nil
@@ -101,8 +138,33 @@ struct GameView: View {
         .onDrop(of: [UTType.card], delegate: CardDropDelegate(draggedCard: $viewModel.draggedCard, tableCard: $viewModel.tableCardMine, cards: $viewModel.cards))
         
     }
+    
 }
 
+struct StepIndicator: View {
+    var steps: Int
+    var currentStep: Int
+    var spacing: CGFloat
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            ForEach(1..<steps + 1, id: \.self) { i in
+                Image(systemName: "\(i).circle\(i < currentStep ? ".fill" : "")")
+                    .foregroundStyle(.black)
+                    .bold(i == currentStep)
+                if i < steps {
+                    Rectangle()
+                        .foregroundStyle(withAnimation {
+                            i < currentStep ? .black : .white
+                        })
+                        .frame(width: spacing, height: 4)
+                }
+            }
+        }
+    }
+    
+    
+}
 /**
  A sidebar which can be expanded by a `Tap Gesture` to show `Content`
  */
@@ -133,6 +195,7 @@ struct SideBar<Content: View> : View {
                                 .scale(scale: 0.1)
                                 .combined(with: .move(edge: .trailing))
                             )
+                            .padding(.vertical, 12)
                             Spacer()
                         }
                     }
@@ -158,5 +221,6 @@ struct SideBar<Content: View> : View {
     var participant = Participant(player: .anonymousGuestPlayer(withIdentifier: "id"), isEmperorSide: true)
     participant.cards = Card.emperorSide
     game.localParticipant = participant
+    game.initGameState()
     return GameView(viewModel: .init(game: game))
 }

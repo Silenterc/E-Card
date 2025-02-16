@@ -16,7 +16,11 @@ The main class that implements the logic for the ECard turn-based game.
 class ECardGame: NSObject, GKMatchDelegate, GKLocalPlayerListener {
     // The game interface state.
     var matchAvailable = false
-    var playingGame = false
+    var playingGame: Bool {
+        get {
+            appCoordinator.isInGame()
+        }
+    }
     var myTurn = false
     var gameState: GameState?
     
@@ -50,14 +54,15 @@ class ECardGame: NSObject, GKMatchDelegate, GKLocalPlayerListener {
     /// Resets the game interface to the content view.
     func resetGame() {
         // Reset the game data.
-        playingGame = false
+        gameState = nil
         myTurn = false
-//        currentMatchID = nil
-//        localParticipant?.items = 50
-//        opponent = nil
+        currentMatchID = nil
+        localParticipant?.cards = []
+        localParticipant?.playedCard = nil
+        opponent = nil
 //        count = 0
-//        youWon = false
-//        youLost = false
+        youWon = false
+        youLost = false
     }
     
     /// Authenticates the local player and registers for turn-based events.
@@ -131,6 +136,72 @@ class ECardGame: NSObject, GKMatchDelegate, GKLocalPlayerListener {
         opponent?.cards = Card.slaveSide
         
         gameState = GameState(group: 1, round: 1, emperorSide: localParticipant, slaveSide: opponent)
+        
+    }
+    /**
+     Gets called when the User finished their turn
+     */
+    func takeTurn() {
+        // Check whether we have played a card
+        guard localParticipant?.playedCard != nil else {
+            print("Cannot end turn")
+            return
+        }
+        
+        // Check whether there's an ongoing match.
+        guard currentMatchID != nil else { return }
+        
+        Task {
+            do {
+                // Load the most recent match object from the match ID.
+                let match = try await GKTurnBasedMatch.load(withID: currentMatchID!)
+                
+                // Remove participants who quit or otherwise aren't in the match.
+                let activeParticipants = match.participants.filter {
+                    $0.status != .done
+                }
+                
+                // End the match if the active participants drop below the minimum. Only the current
+                // participant can end a match, so check for this condition in this method when it
+                // becomes the local player's turn.
+                if activeParticipants.count < minPlayers {
+                    // Set the match outcomes for active participants.
+                    for participant in activeParticipants {
+                        participant.matchOutcome = .won
+                    }
+                    
+                    // End the match in turn.
+                    try await match.endMatchInTurn(withMatch: match.matchData!)
+                    
+                    // Notify the local player when the match ends.
+                    youWon = true
+                } else {
+                    // Otherwise, take the turn and pass to the next participant.
+                    
+                    // Create the game data to store in Game Center.
+                    let gameData = (encodeGameData() ?? match.matchData)!
+
+                    // Remove the current participant from the match participants.
+                    let nextParticipants = activeParticipants.filter {
+                        $0 != match.currentParticipant
+                    }
+                    // Pass the turn to the next participant.
+                    try await match.endTurn(withNextParticipants: nextParticipants, turnTimeout: GKTurnTimeoutDefault,
+                                            match: gameData)
+                    
+                    myTurn = false
+                }
+            } catch {
+                // Handle the error.
+                print("Error: \(error.localizedDescription).")
+                resetGame()
+            }
+            
+            
+            
+        }
+        
+        
         
     }
     
