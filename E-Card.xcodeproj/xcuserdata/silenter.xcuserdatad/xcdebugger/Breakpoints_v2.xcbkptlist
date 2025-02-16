@@ -312,7 +312,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "652C150D-6261-450F-8794-8BB1D8AE68E2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "E-Card/GameKitStuff/ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift"
@@ -328,7 +328,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C3315140-4A14-4311-9340-EA28A0438F8A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "E-Card/GameKitStuff/ECardGame+GKTurnBasedMatchmakerViewControllerDelegate.swift"
