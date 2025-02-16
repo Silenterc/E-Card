@@ -55,9 +55,10 @@ After each round:
 
 # Development progress
 - I started working on the UI
+- I implemented matchmaking via GameKit
 - The Menu and Rules screens have ready prototypes, the Game screen is a heavy WIP right now.
 
-| The Menu Screen (WIP) | The Rules Screen (WIP) | The Game Screen (WIP) |
+| The Menu Screen (WIP) | The Rules Screen (WIP) | The Matchmaking & Game Screen (WIP) |
 |----------------------|----------------------|----------------------|
-| <img src="Media/MenuWIP.png" alt="Menu" width="300"> | <img src="Media/RulesWIP.gif" alt="Rules" width="300"> | <img src="Media/GameWIP.gif" alt="Game" width="300"> |
+| <img src="Media/MenuWIP.png" alt="Menu" width="200"> | <img src="Media/RulesWIP.gif" alt="Rules" width="200"> | <img src="Media/Game+MatchmakingWIP.gif" alt="Game" width="200"> |
 
